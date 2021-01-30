@@ -29,9 +29,7 @@ function ticketFareCalculate(){
     subtotalFare = firstClassInput * 150 + economyClassInput * 100  // got subtotalFare
     document.getElementById('ticketSubtotalFare').innerText = subtotalFare 
 
-
     const tenPercentageVat = (subtotalFare / 100) * 10 // got ticketFareVat
-
     document.getElementById('ticketFareVat').innerText = tenPercentageVat
 
     let totalFareOfTicket = 0
@@ -47,25 +45,25 @@ function bookNow(){
     const confirmMessage = document.getElementById('confirmMessage')
     confirmMessage.style.display = 'block' //confirmMessage display block ( enable )
 
-    const fromLocation = document.getElementById('fromLocation').value // show fromLocation
-    document.getElementById('fromDestination').innerText = fromLocation
+    const fromLocation = document.getElementById('fromLocation').value 
+    document.getElementById('fromDestination').innerText = fromLocation // show fromLocation
 
-    const toLocation = document.getElementById('toLocation').value // show toLocation
-    document.getElementById('toDestination').innerText = toLocation 
+    const toLocation = document.getElementById('toLocation').value 
+    document.getElementById('toDestination').innerText = toLocation // show toLocation
 
-    const departureDate = document.getElementById('departureDate').value // show departureDate
-    document.getElementById('departure').innerText = departureDate
+    const departureDate = document.getElementById('departureDate').value 
+    document.getElementById('departure').innerText = departureDate  // show departureDate
 
-    const returnDate = document.getElementById('returnDate').value // show returnDate
-    document.getElementById('return').innerText = returnDate
+    const returnDate = document.getElementById('returnDate').value 
+    document.getElementById('return').innerText = returnDate  // show returnDate
 
     const firstClassTotalTicket = document.getElementById('firstClassInput').value 
     const firstClassTotalQuantity = parseInt(firstClassTotalTicket)
-    document.getElementById('firstClass').innerText = 0 + firstClassTotalTicket // show only firstClass 
+    document.getElementById('firstClass').innerText = firstClassTotalTicket // show only firstClass 
     
     const economyClassTotalTicket = document.getElementById('economyClassInput').value
     const economyClassTotalQuantity = parseInt(economyClassTotalTicket)
-    document.getElementById('economyClass').innerText = 0 + economyClassTotalTicket //show only economyClass 
+    document.getElementById('economyClass').innerText = economyClassTotalTicket //show only economyClass 
 
     document.getElementById('totalTicket').innerText = firstClassTotalQuantity + economyClassTotalQuantity // show totalTicket quantity
 
